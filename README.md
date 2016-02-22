@@ -1,3 +1,2 @@
 # Byte Flame
-Personal site of Python Jedi. For the sake of learning, I will be making a tool
-to render a static blog from YAML documents. Wish me luck!
+Personal site of Tim 'PythonJedi' Hewitt. For the sake of all that is beautiful and correct, I will be writing the whole site in s-expressions. Currently under construction.
