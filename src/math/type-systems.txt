@@ -1,0 +1,10 @@
+;==============================================================================;
+(subject ~/math/type-systems)
+(title Ruminations on the Natures of Type Systems and Algebras)
+(author Tim 'PythonJedi' Hewitt)
+(note This page under construction!)
+(p 
+  Over the past week and a half, I've been wresting with type systems. Their 
+  purposes, uses, implementations, advantages, disadventages, and so on. It's a
+  wonderful field full of obtuse syntax and strange ideas that don't fit well 
+  into normal everyday life.)
