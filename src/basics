@@ -1,4 +1,5 @@
-<!DOCTYPE text/plain>
+;<!DOCTYPE html>
+;<pre>
 (head
   (title ~/basics))
 (title Basics of S-expression Documents)
@@ -9,3 +10,4 @@
   (p S-expressions are awesome. Go look them up on Wikipedia.))
 (section Why  
   (p Because s-expressions are awesome at containing and describing hierarchies of lists. ))
+;</pre>
