@@ -1,0 +1,31 @@
+(subject ~/systems/strongly-typed-shell)
+(title This shell will offend 90% of POSIX users! </clickbait>)
+(author Tim Hewitt)
+(note This page currently under construction!)
+(section Python
+  (p
+    So, why am I starting an essay on a strongly typed shell one with the least 
+    strongly typed languages out there? I want to show an example of how terrible
+    current systems are, and python uits the task perfectly. I'm also not great 
+    with shell languages.)
+  (p
+    Let's make a simple script to used from the command line. I'm not particularly 
+    intersted in what it does right now. Let's have (code foo, bar, and baz) 
+    represent three different actions this script can do. Let's have those names be the 
+    first argument to the script so the user can specify the action.)
+  (code
+    HELP = " Select from foo, bar baz."
+    def foo():
+      """ do ation foo... """
+    def bar():
+      """ do action bar... """
+    def baz():
+      """ do action baz... """
+      
+    if __name__ == "__main__":
+      import sys
+      act = {"foo": foo, "bar": bar, "baz", baz}
+      if sys.argv[1] in act:
+        act[sys.argv[1]]()
+      else:
+        print(HELP))
