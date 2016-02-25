@@ -107,7 +107,7 @@
     The thing to recognize here is that we don't have the problem of interpreting the user's 
     input and doing what it asked us. We have the arbitrarily large (em problem set) of 
     interpreting an arbitrary user's input and doing what they asked us to. 
-    (note (st Never) use a singluar article with the term 'user'. The user is always an 
+    (note (st Never) use a singluar article with the term 'user'. A user is always an 
     arbitrary indefinite figure we can make very few narrowing assumtpions of.)
     Given that we have an arbitrarily large problem set, how can we presume that one program
     or in-depth specification can be used? If the problem were nice and discrete, maybe we 
@@ -130,5 +130,9 @@
   (p  
     Strong typing allows a language to be checked for type errors without actually being run. 
     This alone is a handy feature. However, it has its place in more dynamic locations like
-    a shell. Pull your hands off the keyboard for a minute and imagine with me, a strongly 
-    typed shell.))
+    a shell. Pull your hands off the keyboard for a minute and imagine with me a strongly 
+    typed shell. Firstly, this is not C-style strong typing where each variable must be 
+    declared as a type. We've long since figured out how to do type inference. Secondly, we 
+    have to throw away the notion of programs being different from functions. Why? Well, 
+    when we make them separate entities, we tend to accept that functions can be picky about 
+    what they recieve, but that a program needs to handle all use cases. Absurd!))
