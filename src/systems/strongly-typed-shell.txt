@@ -76,8 +76,59 @@
   (p
     "But wait! POSIX has its benefits!" I hear. Fingers itch for the 'close tab' keys. 
     Hear me out. The original POSIX spec was written in 1988. The Apple LISA had come out
-    a few years prior, and windows 3.0 was 2 years from release. Any computer user worth 
-    sitting in front of a terminal had to know command line. Over the years, it's 
-    accumulated adjustments, but the entire system assumes a POSIX shell and libc. Such
-    things were wonderful and amazing at the time, but now they are liabilities. We have 
-    many shells, and many libc. Some say that the fact that we use the same languages ))
+    a few years prior, and Windows 3.0 was 2 years from release. Any computer user worth 
+    sitting in front of a terminal had to know command line. Because of this, something 
+    had to be done to standardize the command line interface. POSIX was the quick answer 
+    that got everyone working together and made it possible to write portable code. Over 
+    the years, it's accumulated adjustment to the environment, but the entire system 
+    assumes a POSIX shell and libc. Heck, it still assumes most things are happening at 
+    a terminal. nearly 30 years later, and now we have many shells, and many libc. Some 
+    say that the fact that the languages have stuck around is a testament to their power, 
+    ability, and overall concreteness. They generally follow this with "And that's why 
+    everyone needs to learn C." This is a self fufilling prophecy. If it is everywhere 
+    taught that C is the future and that no other language is capable of replacing it, 
+    then why should we ever change?)
+  (p
+    We need to change because, let's face it, C is actually a pretty terrible language.
+    Sure, it's fast. LLVM has been bringing many other languages close to if not equal 
+    with C. Sure, you can work with pointers and interface well with the kernel. We 
+    haven't bothered rewriting the kernel, mostly because that's a long and difficult 
+    journey. I will fight you tooth and nail on C being portable. If half of your code 
+    is preprocessor directives handling system specific flags so that your equally 
+    complex build system can work on any platform, it's a hack. How such ugly and horrid
+    practices are accepted as 'cross-platform' is beyond me.)
+  (p
+    And anyone that actually writes a large amount of shell or reviews other shell scripts 
+    will tell you that shell (of any kind) is at best a 'necessary evil'. False. We live 
+    in the ever-changing, ever-evolving world of open source software development. If all 
+    current shell is bad, then make a new shell, one that actually works right.))
+(section Type System for $400, Alex
+  (p
+    The thing to recognize here is that we don't have the problem of interpreting the user's 
+    input and doing what it asked us. We have the arbitrarily large (em problem set) of 
+    interpreting an arbitrary user's input and doing what they asked us to. 
+    (note (st Never) use a singluar article with the term 'user'. The user is always an 
+    arbitrary indefinite figure we can make very few narrowing assumtpions of.)
+    Given that we have an arbitrarily large problem set, how can we presume that one program
+    or in-depth specification can be used? If the problem were nice and discrete, maybe we 
+    could say that one program could calculate the entire problem set. Humans are not discrete. 
+    Humans are not immutable. Humans are not even functional! Are we forced to choose between
+    interoperability and customization? Nay, that's a false dichotomy. My answer is to use
+    abstraction layers to separate concerns.)
+  (p
+    Separation of concerns and Abstraction are come of the core philosophies of good computer 
+    programming. Separation of concerns refers to the practice of giving any particular piece 
+    of code one logical purpose. Abstraction is the mental discipline of forgetting about the 
+    layers of code above and below the piece of code currently being worked on. How do these 
+    apply to shell? Well, it means that every tool should have one purpose. Note that a tool's
+    purpose may be to pick other tools in a broader context! How far one should go with this 
+    is primarily an aesthetic decision left to the programmer, but extreme over- and under- 
+    utilization can cause problems. Separation of concerns also means that the interpretation
+    of a user's input into their intent should not be left to the tool. Such computation is why
+    user interfaces exist in the first place! How does the shell know what a program is 
+    capable of acting on? Strong typing.)
+  (p  
+    Strong typing allows a language to be checked for type errors without actually being run. 
+    This alone is a handy feature. However, it has its place in more dynamic locations like
+    a shell. Pull your hands off the keyboard for a minute and imagine with me, a strongly 
+    typed shell.))
