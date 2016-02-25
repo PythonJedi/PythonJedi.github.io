@@ -6,14 +6,14 @@
   (p
     So, why am I starting an essay on a strongly typed shell one with the least 
     strongly typed languages out there? I want to show an example of how terrible
-    current systems are, and python uits the task perfectly. I'm also not great 
-    with shell languages.)
+    current systems are, and python fits the task perfectly. I'm also not great 
+    with proper shell.)
   (p
     Let's make a simple script to used from the command line. I'm not particularly 
     intersted in what it does right now. Let's have (code foo, bar, and baz) 
     represent three different actions this script can do. Let's have those names be the 
     first argument to the script so the user can specify the action.)
-  (code
+  (python '''
     HELP = " Select from foo, bar baz."
     def foo():
       """ do ation foo... """
@@ -29,3 +29,55 @@
         act[sys.argv[1]]()
       else:
         print(HELP))
+  (p
+    That's a pretty simple script. It could be implemented in a shell of your choosing,
+    or just left as python. I already have some issues with it.
+    (ordered-list
+      (This script does three different things. This is just bad design. I shouldn't have 
+        done that.)
+      (The script is checking its argument's correctness. Many programmers would say 
+        that this is fine. I can even faintly hear neckbeards back in bell labs rallying
+        to have this ability. Being able to recieve arbitrary command line agruments is
+        a wonderful, powerful, and error-prone ability.))
+    One of the most common complaints I see levied against python is its lack of strong 
+    typing. The callee is expected to make sure the caller is giving it what it expects.
+    Alternately, the callee blindly does some invalid operation or (even worse) completes
+    but returns some nonsense value.)
+  (p
+    I agree with this sentiment. Using python to program anything serious is an exercise 
+    in print calls and assertions, not application logic. Many professional programmers 
+    consider this unacceptable practice and refuse to use the language. The same can be 
+    said of JavaScript and a half dozen other agile languages.))
+(section So, what's the point?
+  (p
+    Python's type system leaves much to be desired. What's the deal? Well, most shells 
+    I'm aware of work the same way. Any executable that is run by a shell is simply 
+    handed an array of strings that roughly correspond to 'tokens' from the command the
+    shell recieved. This is worse than python, because python gives you more options than
+    (code def foo(*args):) ((that's a list of arbitrary inputs, not a pointer, for you 
+    C people)). Yet tens of thousands of programmers and operators use these 
+    shells on a daily basis, and many users are befuddled at the inconsistency in 
+    command arguments. I have long held that the inconsistency is due to each command 
+    being required to derive the intent of the user independently of any other command.)
+  (p
+    This convention comes as tradition. Back when UNIX was developed, we were still 
+    working out how to write programming languages. I don't claim to understand how the
+    shell conventions came to be, but the one thing that seems to be mostly consistent 
+    across systems is the argument passing paradigm.))
+(section Throw out the bathwater, the baby hasn't gotten cleaner!
+  (p
+    Remember that we are computer scientists. Thosethat have taken up the grand crusade 
+    of telling machines how to calculate things. We create the world we work in. If we 
+    want it to be better, we have to make it better. In this case, the calling convention
+    is a cancerous design flaw that has pierced the very heart of our beloved operating 
+    systems. This makes removing the issue either a very delicate or very catastrophic 
+    procedure. I propose the radical solution of throwing out the entire paradigm of 
+    POSIX.)
+  (p
+    "But wait! POSIX has its benefits!" I hear. Fingers itch for the 'close tab' keys. 
+    Hear me out. The original POSIX spec was written in 1988. The Apple LISA had come out
+    a few years prior, and windows 3.0 was 2 years from release. Any computer user worth 
+    sitting in front of a terminal had to know command line. Over the years, it's 
+    accumulated adjustments, but the entire system assumes a POSIX shell and libc. Such
+    things were wonderful and amazing at the time, but now they are liabilities. We have 
+    many shells, and many libc. Some say that the fact that we use the same languages ))
