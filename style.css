@@ -47,9 +47,13 @@ div.section:before {
 
 p {
     color: black;
-    font-size: 0.8em; # because p are inside div.section, have to invert size
+    font-size: 1em;
     font-weight: normal;
     line-height: 1.15;
+}
+
+div.section > p {
+    font-size: 0.8em;
 }
 
 p > pre {
