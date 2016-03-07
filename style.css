@@ -2,6 +2,7 @@ body {
     counter-reset: section;
     font-size: 100%;
     font-family: sans-serif;
+    background-color: lightcyan;
 }
 
 html, body {
@@ -35,11 +36,11 @@ div.content {
     margin-left: 15%;
     padding: 2em;
     height: 100%;
-    background-color: lightblue;
+    background-color: lightsteelblue;
 }
 
 div.section {
-    color: darkblue;
+    color: indigo;
     font-weight: bold;
     font-size: 1.25em;
     margin-bottom: 0.5em;
@@ -69,6 +70,12 @@ p {
 div.section > p {
     color: black;
     font-size: 0.8em;
+}
+
+pre {
+    border-style: solid;
+    border-color: goldenrod;
+    background-color: lightgoldenrodyellow;
 }
 
 p > pre {
