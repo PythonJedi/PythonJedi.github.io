@@ -1,5 +1,5 @@
 (subject ~/nind/description)
-(script http://bytefla.me/style.css)
+(style http://bytefla.me/style.css)
 (title Nind Is Nonsense, Distilled)
 (author Tim Hewitt)
 (note This page currently under construction!)
