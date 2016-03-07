@@ -9,7 +9,8 @@ html, body {
     height: 100%;
 }
 
-h1 { 
+h1 {
+    color: indigo;
     font-size: 2em;
     font-weight: bold;
     text-align: center;
@@ -17,6 +18,7 @@ h1 {
 }
 
 h2 {
+    color: indigo;
     font-size: 1.5em;
     font-style: italic;
     text-align: center;
@@ -29,6 +31,8 @@ div.note {
     border-color: black;
     margin: 1em;
     padding: 0.5em;
+    font-weight: bold;
+    text-align: center;
 }
 
 div.content {
@@ -36,7 +40,7 @@ div.content {
     margin-left: 15%;
     padding: 2em;
     height: 100%;
-    background-color: lightsteelblue;
+    background-color: lightskyblue;
 }
 
 div.section {
