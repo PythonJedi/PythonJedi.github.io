@@ -1,0 +1,56 @@
+body {
+    counter-reset: section;
+    font-size: 100%;
+    font-family: sans-serif;
+    max-width: 33%;
+    margin: auto;
+}
+
+h1 { 
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-style: italic;
+    text-align: center;
+}
+
+div.note {
+    background-color: gray;
+    border-style: dashed;
+    border-color: black;
+    margin: 1em;
+}
+
+div.section {
+    font-weight: bold;
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+div.section > div.section {
+    counter-reset: section;
+}
+
+div.section > div.section + div.section {
+    counter-increment: section;
+}
+
+div.section:before {
+    counter-increment: section;
+    content: counters(section, ".") " ";
+}
+
+p {
+    color: black;
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.15;
+}
+
+p > pre {
+    display: inline;
+}
