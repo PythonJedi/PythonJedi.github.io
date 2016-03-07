@@ -45,9 +45,8 @@ div.section > div.section + div.section {
 }
 
 div.section:before {
-    text-align: left;
     counter-increment: section;
-    content: counters(section, ".") " ";
+    content: counters(section, ".") "&tab;";
 }
 
 p {
