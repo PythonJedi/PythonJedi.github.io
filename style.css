@@ -4,6 +4,7 @@ body {
     font-family: sans-serif;
     max-width: 50%;
     margin: auto;
+    background-color: lightblue;
 }
 
 h1 { 
@@ -21,7 +22,7 @@ h2 {
 }
 
 div.note {
-    background-color: gray;
+    background-color: yellow;
     border-style: dashed;
     border-color: black;
     margin: 1em;
@@ -29,10 +30,10 @@ div.note {
 }
 
 div.section {
+    color: darkblue;
     font-weight: bold;
     font-size: 1.25em;
     margin-bottom: 0.5em;
-    text-align: right;
 }
 
 div.section > div.section {
@@ -46,7 +47,7 @@ div.section > div.section + div.section {
 
 div.section:before {
     counter-increment: section;
-    content: counters(section, ".") "    ";
+    content: counters(section, ".") " ";
 }
 
 p {
@@ -57,7 +58,7 @@ p {
 }
 
 div.section > p {
-    text-align: left;
+    color: black;
     font-size: 0.8em;
 }
 
