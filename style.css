@@ -2,7 +2,7 @@ body {
     counter-reset: section;
     font-size: 100%;
     font-family: sans-serif;
-    background-color: lightcyan;
+    background-color: lightskyblue;
 }
 
 html, body {
@@ -40,7 +40,7 @@ div.content {
     margin-left: 15%;
     padding: 2em;
     height: 100%;
-    background-color: lightskyblue;
+    background-color: lightcyan;
 }
 
 div.section {
