@@ -46,7 +46,7 @@ div.section > div.section + div.section {
 
 div.section:before {
     counter-increment: section;
-    content: counters(section, ".") "	";
+    content: counters(section, ".") "    ";
 }
 
 p {
