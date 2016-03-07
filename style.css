@@ -32,6 +32,7 @@ div.section {
     font-weight: bold;
     font-size: 1.25em;
     margin-bottom: 0.5em;
+    text-align: right;
 }
 
 div.section > div.section {
@@ -56,6 +57,7 @@ p {
 }
 
 div.section > p {
+    text-align: left;
     font-size: 0.8em;
 }
 
