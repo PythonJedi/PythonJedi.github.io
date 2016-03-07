@@ -29,8 +29,8 @@ div.note {
 div.content {
     max-width: 50%;
     margin-left: 30%;
-    padding: 5%;
-    height: 100%;
+    padding: 2em;
+    collumn-fill: inherit;
     background-color: lightblue;
 }
 
