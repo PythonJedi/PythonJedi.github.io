@@ -32,6 +32,7 @@ div.section {
 }
 
 div.section > div.section {
+    font-size: 1em;
     counter-reset: section;
 }
 
@@ -46,7 +47,7 @@ div.section:before {
 
 p {
     color: black;
-    font-size: 1em;
+    font-size: 0.8em; # because p are inside div.section, have to invert size
     font-weight: normal;
     line-height: 1.15;
 }
