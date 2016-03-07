@@ -2,9 +2,6 @@ body {
     counter-reset: section;
     font-size: 100%;
     font-family: sans-serif;
-    max-width: 50%;
-    margin: auto;
-    background-color: lightblue;
 }
 
 h1 { 
@@ -27,6 +24,12 @@ div.note {
     border-color: black;
     margin: 1em;
     padding: 0.5em;
+}
+
+div.content {
+    max-width: 50%;
+    margin: auto;
+    background-color: lightblue;
 }
 
 div.section {
