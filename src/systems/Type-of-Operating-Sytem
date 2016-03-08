@@ -1,0 +1,165 @@
+(title The Type of Operating System)
+(author Timothy Hewitt)
+(p
+  The Operating System. It's an essential component in any computer 
+  installation. Decades-long holy wars have been waged across the internet about
+  the varying advantages of one OS or another. Splits, shifts, and hostile 
+  takeovers have left the history of computing strewn with old and dead OSs. 
+  Modern systems include Microsoft's Windows, Apple's OSX and iOS, a plethora 
+  that are based on the Linux kernel \(including Google's Android\), and even 
+  the dedicated systems that run on videogame consoles and cable boxes. So, what
+  (em is) an (st Operating System)?)
+(section Colloquial Definition
+  (p
+    From the myriad examples we have around us, what can we say is common about 
+    them? So much changes from instance to instance, especially in the 
+    hardware-specific instances like gaming consoles, there's actually very 
+    little in common. However, there are some design features we can tease out.)
+  (p
+    Firstly, operating systems are run on powerful computing devices. This may 
+    seem obvious, but it bears defining, as we don't have to consider how to
+    put an operating system on a four-function calculator.)
+  (p
+    Operating systems have at least one User, and those that have more than one
+    allow privacy between users. This bears a little more consideration. If 
+    there is a user, then the user must be able to communicate their intent to 
+    the operating system and the other things running on the computer. I'll get 
+    to that in a moment. When there are multiple users, one user shouldn't be 
+    able to negatively affect another, and as positive and negative effects are
+    nigh indistinguishable to computers, the OS must have some means of letting 
+    the user designate who can do what to their things.)
+  (p
+    Operating systems control acess to the physical devices connected to the 
+    computer the OS is running on. This is where things like keyboards, mice, 
+    touchscreens, microphones, video screens, speakers, buzzer motors, printers,
+    and anything else we can manage to connect to an electronic circuit come 
+    into play. Because each device must be able to communicate by its own 
+    method, the realm of interfacing devices with applications has generally 
+    been a cooperative effort between the OS and various "driver" programs.)
+  (p
+    Operating systems have \"applications\", which are complex groups of 
+    programs that accomplish equally complex tasks, like word processing and 
+    internet browsing. These applications can generally be added and removed 
+    without significantly changing how the operating system works. These 
+    applications are often what a user interacts with to accomplish some task 
+    with the computer.)
+  (p
+    Operating systems abstract the nitty-gritty details of how they do what 
+    their user wishes them to do. The entire reason machines and programs are 
+    made is to accomplish some task with as little intervention as possible. But
+    what (em does) an operating system do?))
+(section Machines Versus Computers Versus Programs
+  (p
+    Before we get into what operating systems do, I want to detour into some
+    definitions. The terms 'Machine', 'Computer', and 'Program' tend to have 
+    their own very specific definitions. Machines are physical mechanical 
+    devices that do something to something else. Computers are an amalgamation 
+    of super-complex electronic circuits that do all sorts of neat things in 
+    'virtual space' or whatever you want to call it. Programs are the things 
+    that programmers write and computers run, telling the computer how to do 
+    those neat things mentioned previously. These definitions are colloquially 
+    accepted even amongst computer science majors. They are also totally and 
+    completely WRONG.)
+  (p
+    The given definition for machine is correct, but it's not comprehensive. 
+    There are more things that fall under the category of 'machine' than just 
+    the mechanical devices. 'Computer' falls into the same trap. A 4-function 
+    calculator is a computer. It computes mathematical expressions. I am a 
+    computer. I'm computing a complex process to turn my thoughts into 
+    intelligible english sentences. What isn't a computer? Well, that's a 
+    complex question. Those of us that study computation have adopted various 
+    hierarchies for describing the relative \"power\" of something that 
+    computes. The things that don't fall into these hierarchies are probably not
+    computers, but each one takes some analysis and creative thinking to make 
+    sure that it in fact is not a part of a particular hierarchy.)
+  (p
+    \"Program\" is such a clunky term for what it refers to. When someone writes
+    a \"program\", what they're really doing is describing how to compute some 
+    value given some other values and various abilities. Sure, they may look 
+    like imperative instructions, but they're just a specification for a thing 
+    that calculates something. Computers that are high enough in the hierarchies
+    can actually take these specifications and do the calculation described, 
+    then use a different description to calculate some other value in some other
+    way. Note that the same computer is able to do this (em through the same 
+    mechanism!) ... Is it clicking yet? Programs describe computers, and 
+    computers are machines. We can even say that a particular program (em is) a 
+    machine, and that we simply modify that machine through a textual 
+    description of it.)
+  (p
+    Let me put that on a paragrpah by itself: Programs, computers, and machines 
+    are all the same thing.)
+  (p
+    If there were an agreed upon fundamental theorem of computer science, that'd
+    probably be part of it. Since we can describe machines that operate on data 
+    with other data, the distinction between a machine and its description 
+    starts to fall apart. I like to call this the 'Code-Data Duality' because I
+    like scientific sounding terms. The point is that machines that create other
+    machines, while complex and difficult to make in the physical world, are 
+    actually quite easy in the realm of electronics and computation.)
+  (p
+    One last point before I move on: in mathematics, we often use things called
+    'Functions'. These are just a group of machines that calculate the same 
+    value when given the same input. As such, I'll often use the term function 
+    interchangably with the term machine when I'm working in a context where I 
+    expect the same thing to happen for the same input. I'll occasionally 
+    interchange them when that's not the case. While not mathematically 
+    rigorous, the error is relatively minor in a high-level discussion.))
+(section What OSs Do
+  (p
+    So, now that we're on the same page about machines, programs, and computers,
+    what does an operating system accomplish? Well, from the properties in our 
+    examples above, they seems to have the capability of creating, starting, and
+    stopping multiple machines of varying complexity. Indeed, many of them are 
+    capable of starting many of these machines at once and making sure that the
+    underlying physical computer is shared by these machines. However, this is
+    simply manipulating symbols, calculating, on machines. And this machine is 
+    no more powerful than the other machines. Look at Virtual Machines. An 
+    operating system is able to start and manage a machine, known as a 
+    'Hypervisor', that lets another operating system run inside it. Operating 
+    systems must be machines/computers/programs as well!))
+(section So...
+  (p
+    Where does this leave us? We now consider operating systems to be the same 
+    thing as applications, which is a machine that operates on data. So what's 
+    different? Well, for one, an operating system is designed to be started 
+    without anything else running, as the first thing that a physical computer
+    begins calculating. Operating systems also have machines that are able to
+    communicate with external hardware and produce data that is menaingful to 
+    the operating system and the other machines running under it. The operating 
+    system also channels input and output in a way that allows multiple users to
+    interact with the machines the computer is capable of calculating in ways 
+    that each user prefers.)
+  (p
+    Does this sound like your operating system of choice? In some instances, the
+    use case for the operating system means that some of the general power is 
+    locked away. In other cases, the generality and mutability are designed out
+    in order to provide a more uniform experience. In other cases, there are 
+    limitations because the current system was designed to be tightly attached 
+    to a particular kind of physical computer, or makes certain assumptions 
+    about how some part must work. This isn't entirely necessary though. 
+    Computer Science is a realm of infinite possibility where we can quickly 
+    create the world we wish to be in.))
+(section The Machine Composition Model
+  (p 
+    What I'm going to spend the rest of this text on is what I term to be the
+    'Machine Composition Model'. Remember that a machine is just a thing that
+    manipulates something else. In this case, we're manipulating anything from
+    individual bits and bytes on a hard drive to the very structure of an 
+    operating system. Composition is a math term for taking the output of one 
+    function and passing it to another function as an input. Well, not exactly.
+    It's actually the process of creating a new function that (em effectively) 
+    processes data by sending it through the two functions. In the context of 
+    machines, composing two machines just means hooking up two smaller machines 
+    and referring to the par as a single machine.)
+  (p
+    With just these two abstractions, we can begin to answer \"What type of 
+    thing is an operating system?\". To begin, we start with a machine that 
+    works on many different inputs and produces many outputs. We can 
+    'de-compose' this machine into a group of connected machines. Obviously, 
+    there's a machine for each type of input and each type of output. There's 
+    also a machine that deals with manipulating the group of machines, and 
+    there's a machine that allows users to \"log in\" and triggers the creation 
+    and running of their user environment. Each of these can theoretically be 
+    decomposed into smaller and smaller machines until the resulting 
+    sub-machines cannot be decomposed. How abstract a particular machine is 
+    depends on what it's trying to compute.))
