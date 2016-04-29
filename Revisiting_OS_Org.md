@@ -62,15 +62,15 @@ taking data from a source, transforming it, and then sending it to an output.
 
 ## In Depth Example
 
-Web browsing? That's actually a feedback loop requring human input to select the 
-next webpage to load. However, we can look at the pipeline of loading the webpage, 
-which involves the following basic phases: turn a URL into an https connection and
-send the request, read the data off the connection and determine the type of document
-being sent, parse the document into a tree (known as the Document Object Model),
-set up the javascript callbacks, then start rendering the tree into lower and
-lower level graphical primitives, eventually reaching the point where a frame
-has been rendered and is sent to the compositor which layers it on top of the
-other windows on screen. 
+What would be required to implement web browsing in such a system? We browsing is 
+actually a feedback loop requring human input to select the next webpage to load. 
+However, we can look at the pipeline of loading the webpage, which involves the 
+following basic phases: turn a URL into an https connection and send the request, 
+read the data off the connection and determine the type of document being sent, 
+parse the document into a tree (known as the Document Object Model), set up the 
+javascript callbacks, then start rendering the tree into lower and lower level 
+graphical primitives, eventually reaching the point where a frame has been rendered
+and is sent to the compositor which layers it on top of the other windows on screen. 
 
 Existing web browsers do all this, and do it very well. Here's the thing. What if I 
 want to have my web browser also render Markdown and LaTeX files natively? In existing 
