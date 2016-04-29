@@ -21,7 +21,7 @@ time, waiting for the operator to load up the next process to be computed after
 the current one finished. This was great, as it made time consuming calculations
 much less taxing on the humans, freeing them up for higher-level analysis and
 optimization of the calculation. This design is the simplest to implement
-and write code for, but have limitations in usability.
+and write code for, but has limitations in usability.
 
 Eventually, we moved on to the mainframe design. These mainframes often had more
 than one terminal with one user per terminal. These mainframes *could* have been
@@ -36,7 +36,7 @@ with each other. This interaction is where everything went wrong.
 
 ##The actual problem domain
 
-I feel like concurrent programming strategies are having a "cannot see the
+I think concurrent programming strategies have a "cannot see the
 forest for all the trees" issue. By assuming that processes must be able to act
 like they're running on a sandboxed mainframe back in the 1950's, we introduce
 the myriad issues we see in modern programs and operating systems. What if we
@@ -50,7 +50,7 @@ clients is not unreasonable. Traditionally, we'd have to make at least one
 process for each task and have the OS arbitrate disk and network access, as well
 as route user input to the correct application, tied together with the user
 interface. This jumbled mess of divisions and overlaps in concern create the
-concurrency nightmare, unnecessarily.
+concurrency nightmare.
 
 What the user really wants to be able to do is see and hear the twitch stream,
 see and respond to chat feeds, and have that file downloading in the background.
@@ -60,26 +60,26 @@ just lists out the tasks that must be done. When we just look at what a user may
 want to have their computer do, we see that everything boils down to
 taking data from a source, transforming it, and then sending it to an output.
 
-Web browsing? That's actually a feedback loop involving the user, but loading up
-a web page involves the following steps: turn a URL into a readable https
-connection, read the data off the connection, determining the type of document
-being sent. Parse the document into a tree (known as the Document Object Model),
+## In Depth Example
+
+Web browsing? That's actually a feedback loop requring human input to select the 
+next webpage to load. However, we can look at the pipeline of loading the webpage, 
+which involves the following basic phases: turn a URL into an https connection and
+send the request, read the data off the connection and determine the type of document
+being sent, parse the document into a tree (known as the Document Object Model),
 set up the javascript callbacks, then start rendering the tree into lower and
 lower level graphical primitives, eventually reaching the point where a frame
 has been rendered and is sent to the compositor which layers it on top of the
-other windows on screen. When the user inputs a command to scroll the page, a
-render pass is triggered on the existing DOM with a new clipping area.
+other windows on screen. 
 
-Complicated? You bet. Existing web browsers do all this, and do it very well.
-Here's the thing. What if I want to have my web browser also render Markdown and
-LaTeX files natively? On existing software, this is a massive undertaking
-because all of this code is tightly coupled and hard to inject. Instead of that,
-We could design a pipeline that routes documents based on their type to
+Existing web browsers do all this, and do it very well. Here's the thing. What if I 
+want to have my web browser also render Markdown and LaTeX files natively? In existing 
+browsers, this is a massive undertaking because all of the rendering code is tightly 
+coupled to the network code and hard to append to correctly. Instead of that,
+we could design a pipeline that routes documents based on their type to
 transformations that turn those documents into parse trees that can be rendered
 by one rendering toolkit. To add markdown rendering, all we have to do is write
-the markdown parser and plumb it in to the existing pipeline. Even better, other
-applications on the computer can reuse that same toolkit to render their
-interfaces as well.
+the markdown parser and plumb it in to the existing pipeline.
 
 This modularity and abstraction come at a cost: Every piece of code on the
 computer has to agree on the definitions of the types of data being operated on.
@@ -130,7 +130,7 @@ modifying the volume levels, listening for events on a different socket and
 inserting animations and sound into the stream.
 
 Right now, this realm is a complete and utter mess, because it is based on the
-idea of inter-process communication. When instead we look at the operations
+idea of inter-process communication. Instead we should modularize the operations
 required to produce the desired data stream and then consider "applications" as
 data pipelines that translate user input into modified data streams.
 
