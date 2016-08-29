@@ -1,2 +1,2 @@
 # ByteFla.me
-Personal site of Tim 'PythonJedi' Hewitt. For the sake of all that is beautiful and correct, I will be writing the whole site in s-expressions. Currently under construction.
+Personal site of Tim 'PythonJedi' Hewitt. A collection of documents pertaining to the nature of computation. Mostly markdown with some PDFs
