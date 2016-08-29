@@ -1,4 +1,0 @@
-(script foo)
-(author bar)
-(title baz)
-(subject eggs)
